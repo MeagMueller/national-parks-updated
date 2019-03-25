@@ -44,12 +44,16 @@ const handleUpdate = () => {
 
   const editedParkName = document.querySelector(`#edit-park-name--${parkId}`);
   const editedParkState = document.querySelector(`#edit-park-state--${parkId}`);
+  const editedLatitude = document.querySelector(`#edit-park-latitude--${parkId}`);
+  const editedLongitude = document.querySelector(`#edit-park-longitude--${parkId}`);
 
-  console.log(editedParkName.value, editedParkState.value);
+  console.log(editedParkName.value, editedParkState.value, editedLatitude.value, editedLongitude.value);
 
   let editedPark = {
     name: editedParkName.value,
-    state: editedParkState.value
+    state: editedParkState.value,
+    latitude: editedLatitude.value,
+    longitude: editedLongitude.value
   };
 
   putPark(parkId, editedPark).then(() => listNationalParks());

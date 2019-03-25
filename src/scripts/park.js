@@ -33,6 +33,12 @@ const parkEditForm = (parkObject) => {
   editFormFragment.appendChild(buildElement("label", undefined, "State: "))
   editFormFragment.appendChild(buildElement("input", `edit-park-state--${parkObject.id}`, undefined, parkObject.state))
 
+  editFormFragment.appendChild(buildElement("label", undefined, "Latitude: "))
+  editFormFragment.appendChild(buildElement("input", `edit-park-latitude--${parkObject.id}`, undefined, parkObject.latitude))
+
+  editFormFragment.appendChild(buildElement("label", undefined, "Longitude: "))
+  editFormFragment.appendChild(buildElement("input", `edit-park-longitude--${parkObject.id}`, undefined, parkObject.longitude))
+
   const updateParkButton = buildElement("button", undefined, "Update")
   updateParkButton.addEventListener("click", handleUpdate)
   editFormFragment.appendChild(updateParkButton)
